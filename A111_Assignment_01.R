@@ -11,3 +11,8 @@ data$Average.Participation <- as.numeric(data$Average.Participation)
 
 #Now i want to remove NA values if have any in dataset
 average_participation <- na.omit(data$Average.Participation)
+
+#NOw creating histogram
+hist(average_participation, breaks = 15, probability = TRUE, col = "blue", main = "Histogram of Average Participation with Bell Curve", xlab="Average Participaion (Number of Pregnant Women)", ylab = "Frequency")
+
+
