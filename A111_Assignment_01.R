@@ -15,4 +15,5 @@ average_participation <- na.omit(data$Average.Participation)
 #NOw creating histogram
 hist(average_participation, breaks = 15, probability = TRUE, col = "blue", main = "Histogram of Average Participation with Bell Curve", xlab="Average Participaion (Number of Pregnant Women)", ylab = "Frequency")
 
-
+# density curve
+lines(density(average_participation), col="red", lwd=2)
