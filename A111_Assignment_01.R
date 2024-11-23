@@ -17,3 +17,5 @@ hist(average_participation, breaks = 15, probability = TRUE, col = "blue", main 
 
 # density curve
 lines(density(average_participation), col="red", lwd=2)
+# Remove NA values and sort the data to get the top 10 performers
+top_performers <- data[order(-data$Average.Participation), ][1:10, ]
