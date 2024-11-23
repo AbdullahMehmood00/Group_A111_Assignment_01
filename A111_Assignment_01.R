@@ -7,7 +7,7 @@ data <- read_csv("Pregnant_Women_Participating.csv")
 data
 
 # convert average participant to number
-data$Average.Participation <- as.numeric(data$Average.Participation)
+data$Average.Participation <- as.numeric(data$"Average Participation")
 
 #Now i want to remove NA values if have any in dataset
 average_participation <- na.omit(data$Average.Participation)
@@ -17,3 +17,8 @@ hist(average_participation, breaks = 15, probability = TRUE, col = "blue", main 
 
 # density curve
 lines(density(average_participation), col="red", lwd=2)
+
+
+
+
+
