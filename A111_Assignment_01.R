@@ -17,8 +17,3 @@ hist(average_participation, breaks = 15, probability = TRUE, col = "blue", main 
 
 # density curve
 lines(density(average_participation), col="red", lwd=2)
-
-
-
-
-
