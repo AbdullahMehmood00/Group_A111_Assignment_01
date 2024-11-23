@@ -19,3 +19,13 @@ hist(average_participation, breaks = 15, probability = TRUE, col = "blue", main 
 lines(density(average_participation), col="red", lwd=2)
 # Remove NA values and sort the data to get the top 10 performers
 top_performers <- data[order(-data$Average.Participation), ][1:10, ]
+barplot(
+  height = top_performers$Average.Participation,
+  names.arg = top_performers$State.Agency.or.Indian.Tribal.Organization,
+  horiz = TRUE,
+  las = 1, # Rotate axis labels for better readability
+  col = "skyblue",
+  main = "Top 10 States/Organizations by Average Participation",
+  xlab = "Average Participation (Number of Pregnant Women)",
+  cex.names = 0.8 # Adjust label size
+)
