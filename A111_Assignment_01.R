@@ -38,4 +38,7 @@ barplot(height = top_performers$Average.Participation, names.arg = top_performer
 
 # Create a levels: Low, Medium, High
 bins <- c(0, 5000, 20000, Inf)
+#labels
+labels <- c("Low", "Medium", "High")
+data$Participation.Level <- cut(data$Average.Participation, breaks = bins, labels = labels, right = FALSE)
 
