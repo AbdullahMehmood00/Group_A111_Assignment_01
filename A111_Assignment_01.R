@@ -36,4 +36,6 @@ barplot(height = top_performers$Average.Participation, names.arg = top_performer
         cex.names = 0.8
         )
 
+# Create a levels: Low, Medium, High
+bins <- c(0, 5000, 20000, Inf)
 
