@@ -26,11 +26,12 @@ top_performers
 
 
 #Barplot
-barplot(height = top_performers$Average.Participation, names.arg = top_performers$State.Agency.or.Indian.Tribal.Organization,
+barplot(height = top_performers$Average.Participation, names.arg = top_performers$"State Agency or Indian Tribal Organization",
         horiz = TRUE,
         las = 1,
         col = "skyblue",
         main = "Top 10 States/Organization by Average Participantion",
         xlab = "Average Participation (Number of preganat Women)",
+        #ylab = top_performers$"State Agency or Indian Tribal Organization",
         cex.names = 0.8
         )
