@@ -25,7 +25,7 @@ top_performers <- data[order(-data$Average.Participation), ][1:10, ]
 top_performers
 
 
-#Barplot
+#Barplot show the top 10 states
 barplot(height = top_performers$Average.Participation, names.arg = top_performers$"State Agency or Indian Tribal Organization",
         horiz = TRUE,
         las = 1,
@@ -35,3 +35,5 @@ barplot(height = top_performers$Average.Participation, names.arg = top_performer
         #ylab = top_performers$"State Agency or Indian Tribal Organization",
         cex.names = 0.8
         )
+
+
