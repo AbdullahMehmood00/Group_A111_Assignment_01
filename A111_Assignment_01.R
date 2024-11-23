@@ -29,3 +29,5 @@ barplot(
   xlab = "Average Participation (Number of Pregnant Women)",
   cex.names = 0.8 # Adjust label size
 )
+# Remove NA values and sort the data to get the top 10 performers
+top_performers <- data[order(-data$Average.Participation), ][1:10, ]
