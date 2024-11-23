@@ -19,6 +19,18 @@ hist(average_participation, breaks = 15, probability = TRUE, col = "blue", main 
 lines(density(average_participation), col="red", lwd=2)
 
 #Now we are working to find top 10 performers
-#get top 10 performers 1 to 10 -> [1:10]
+#get top 10 performers 1 to 10 -> [1:10], if we need top 15 than use [1:15], but right now i need only 10 top performers
 top_performers <- data[order(-data$Average.Participation), ][1:10, ]
+#print top performers
 top_performers
+
+
+#Barplot
+barplot(height = top_performers$Average.Participation, names.arg = top_performers$State.Agency.or.Indian.Tribal.Organization,
+        horiz = TRUE,
+        las = 1,
+        col = "skyblue",
+        main = "Top 10 States/Organization by Average Participantion",
+        xlab = "Average Participation (Number of preganat Women)",
+        cex.names = 0.8
+        )
