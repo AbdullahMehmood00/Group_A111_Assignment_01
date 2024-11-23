@@ -17,3 +17,8 @@ hist(average_participation, breaks = 15, probability = TRUE, col = "blue", main 
 
 # density curve
 lines(density(average_participation), col="red", lwd=2)
+
+#Now we are working to find top 10 performers
+#get top 10 performers 1 to 10 -> [1:10]
+top_performers <- data[order(-data$Average.Participation), ][1:10, ]
+top_performers
