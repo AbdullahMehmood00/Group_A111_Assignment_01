@@ -60,5 +60,12 @@ contingency_table <- table(data$"State Agency or Indian Tribal Organization", da
 # Perform the Chi-squared test
 chi_squared_test <- chisq.test(contingency_table)
 
+
 # Print the results
 print(chi_squared_test)
+
+
+
+
+
+
