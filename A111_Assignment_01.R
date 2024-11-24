@@ -1,5 +1,6 @@
 library(readr)
 
+
 #Load data
 data <- read_csv("Pregnant_Women_Participating.csv")
 
@@ -38,6 +39,16 @@ barplot(height = top_performers$Average.Participation, names.arg = top_performer
 
 # Create a levels: Low, Medium, High
 bins <- c(0, 5000, 20000, Inf)
+#labels
+labels <- c("Low", "Medium", "High")
+data$Participation.Level <- cut(data$Average.Participation, breaks = bins, labels = labels, right = FALSE)
+
+# Now create contingency table for State vs Participation Levels
+contingency_table <- table(data$"State Agency or Indian Tribal Organization", data$Participation.Level)
+
+# Create a levels: Low, Medium, High
+bins <- c(0, 5000, 20000, Inf)
+
 #labels
 labels <- c("Low", "Medium", "High")
 data$Participation.Level <- cut(data$Average.Participation, breaks = bins, labels = labels, right = FALSE)
