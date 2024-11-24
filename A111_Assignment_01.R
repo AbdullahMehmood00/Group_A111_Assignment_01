@@ -55,3 +55,4 @@ data$Participation.Level <- cut(data$Average.Participation, breaks = bins, label
 
 # Now create contingency table for State vs Participation Levels
 contingency_table <- table(data$"State Agency or Indian Tribal Organization", data$Participation.Level)
+
