@@ -56,3 +56,9 @@ data$Participation.Level <- cut(data$Average.Participation, breaks = bins, label
 # Now create contingency table for State vs Participation Levels
 contingency_table <- table(data$"State Agency or Indian Tribal Organization", data$Participation.Level)
 
+
+# Perform the Chi-squared test
+chi_squared_test <- chisq.test(contingency_table)
+
+# Print the results
+print(chi_squared_test)
