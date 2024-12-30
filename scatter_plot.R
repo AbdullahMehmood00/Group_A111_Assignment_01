@@ -2,7 +2,7 @@
 library(ggplot2)
 
 # Load the dataset
-data <- read.csv("/home/imran/Downloads/Pregnant_Women_Participating.csv")  # Replace with your actual file path
+data <- read.csv("Pregnant_Women_Participating.csv")
 
 # Ensure 'Average Participation' is numeric
 data$Average.Participation <- as.numeric(data$Average.Participation)
